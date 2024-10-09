@@ -1,6 +1,7 @@
 {% extends 'layouts/base.html' %}
 {% load static %}
 {% load i18n %}
+{% load my_tags %}
 
 {% block content %}
 
@@ -50,15 +51,14 @@
 
                     <li class="nav-item">
                         <select class="form-select language-select" aria-label="Select language">
-                            <option value="en" selected>
-                                English
-                            </option>
-                            <option value="uz">
-                                Uzbek
-                            </option>
-                            <option value="ru">
-                                Rus
-                            </option>
+                            {% get_available_languages as all_langs %}
+                            {% for lang in all_langs %}
+                                    <option value="en" selected>
+                                        <a href="{% get_full_url request lang.0 %}">
+                                            {{ lang.1 }}
+                                        </a>
+                                    </option>
+                            {% endfor %}
                         </select>
 
                     </li>
