@@ -1,0 +1,103 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-10-09 05:32+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: .\common\models.py:5
+msgid "Created time:"
+msgstr "Yaratilgan vaqti"
+
+#: .\common\models.py:6
+msgid "Updated time"
+msgstr "Yangilangan vaqti"
+
+#: .\feedback\models.py:8
+msgid "Comment text"
+msgstr "Izoh matni"
+
+#: .\feedback\models.py:17
+msgid "Comment user"
+msgstr "Izoh muallifi"
+
+#: .\feedback\models.py:21
+msgid "Comment"
+msgstr "Izoh"
+
+#: .\feedback\models.py:22 .\templates\index.html:44
+msgid "Comments"
+msgstr "Izohlar"
+
+#: .\feedback\models.py:26 .\feedback\models.py:35
+msgid "Title"
+msgstr "Sarlavha"
+
+#: .\feedback\models.py:27 .\feedback\models.py:36
+msgid "Description"
+msgstr "Matn"
+
+#: .\feedback\models.py:30
+msgid "Problem"
+msgstr "Shikoyat"
+
+#: .\feedback\models.py:31 .\templates\index.html:36
+msgid "Problems"
+msgstr "Shikoyatlar"
+
+#: .\feedback\models.py:42 .\users\models.py:14
+msgid "User"
+msgstr "Foydalanuvchi"
+
+#: .\feedback\models.py:46
+msgid "Offer"
+msgstr "Taklif"
+
+#: .\feedback\models.py:47 .\templates\index.html:40
+msgid "Offers"
+msgstr "Takliflar"
+
+#: .\teams\models.py:8
+msgid "Position of employee"
+msgstr "Xodim lavozimi"
+
+#: .\teams\models.py:11
+msgid "Employee"
+msgstr "Xodim"
+
+#: .\teams\models.py:12
+msgid "Employees"
+msgstr "Xodimlar"
+
+#: .\templates\index.html:32
+msgid "Home"
+msgstr "Bosh sahifa"
+
+#: .\users\models.py:9
+msgid "Organization"
+msgstr "Tashkilot"
+
+#: .\users\models.py:10
+msgid "Location"
+msgstr "Manzil"
+
+#: .\users\models.py:11
+msgid "linkedin"
+msgstr "Linkedin"
+
+#: .\users\models.py:15
+msgid "Users"
+msgstr "Foydalanuvchilar"

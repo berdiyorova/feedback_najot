@@ -1,0 +1,105 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-10-09 05:32+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: .\common\models.py:5
+msgid "Created time:"
+msgstr ""
+
+#: .\common\models.py:6
+msgid "Updated time"
+msgstr ""
+
+#: .\feedback\models.py:8
+msgid "Comment text"
+msgstr ""
+
+#: .\feedback\models.py:17
+msgid "Comment user"
+msgstr ""
+
+#: .\feedback\models.py:21
+msgid "Comment"
+msgstr ""
+
+#: .\feedback\models.py:22 .\templates\index.html:44
+msgid "Comments"
+msgstr ""
+
+#: .\feedback\models.py:26 .\feedback\models.py:35
+msgid "Title"
+msgstr ""
+
+#: .\feedback\models.py:27 .\feedback\models.py:36
+msgid "Description"
+msgstr ""
+
+#: .\feedback\models.py:30
+msgid "Problem"
+msgstr ""
+
+#: .\feedback\models.py:31 .\templates\index.html:36
+msgid "Problems"
+msgstr ""
+
+#: .\feedback\models.py:42 .\users\models.py:14
+msgid "User"
+msgstr ""
+
+#: .\feedback\models.py:46
+msgid "Offer"
+msgstr ""
+
+#: .\feedback\models.py:47 .\templates\index.html:40
+msgid "Offers"
+msgstr ""
+
+#: .\teams\models.py:8
+msgid "Position of employee"
+msgstr ""
+
+#: .\teams\models.py:11
+msgid "Employee"
+msgstr ""
+
+#: .\teams\models.py:12
+msgid "Employees"
+msgstr ""
+
+#: .\templates\index.html:32
+msgid "Home"
+msgstr ""
+
+#: .\users\models.py:9
+msgid "Organization"
+msgstr ""
+
+#: .\users\models.py:10
+msgid "Location"
+msgstr ""
+
+#: .\users\models.py:11
+msgid "linkedin"
+msgstr ""
+
+#: .\users\models.py:15
+msgid "Users"
+msgstr ""
