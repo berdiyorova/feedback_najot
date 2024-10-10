@@ -34,6 +34,7 @@ class ProblemModel(AbstractBaseModel):
 class OfferModel(AbstractBaseModel):
     title = models.CharField(max_length=255, verbose_name=_('Title'))
     description = models.TextField(verbose_name=_("Description"))
+    status = models.BooleanField(default=False)
     user = models.ForeignKey(
         CustomUserModel,
         on_delete=models.SET_NULL,
@@ -45,3 +46,16 @@ class OfferModel(AbstractBaseModel):
     class Meta:
         verbose_name = _('Offer')
         verbose_name_plural = _('Offers')
+
+
+class QuestionModel(AbstractBaseModel):
+    q_title = models.CharField(max_length=255, verbose_name=_("Question title"))
+    question = models.TextField(verbose_name=_("Question text"))
+    answer = models.TextField(verbose_name=_("Answer"))
+
+    def __str__(self):
+        return self.q_title
+
+    class Meta:
+        verbose_name = "Question"
+        verbose_name_plural = "Questions"

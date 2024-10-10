@@ -9,6 +9,7 @@ class CustomUserModel(AbstractUser, AbstractBaseModel):
     organization = models.CharField(max_length=255, verbose_name=_("Organization"))
     location = models.CharField(max_length=255, verbose_name=_("Location"))
     linkedin = models.URLField(max_length=255, verbose_name=_("linkedin"))
+    photo = models.ImageField(upload_to="users/", default="user_default_photo.png")
 
     class Meta:
         verbose_name = _("User")
