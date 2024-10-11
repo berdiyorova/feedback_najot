@@ -34,20 +34,21 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'feedback:offer_form' %}">{% trans 'Problems' %}</a>
+                        <a class="nav-link" href="{% url 'feedback:send_problem' %}">{% trans 'Send Problem' %}</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'feedback:offer' %}">{% trans 'Offers' %}</a>
+                        <a class="nav-link" href="{% url 'feedback:send_offer' %}">{% trans 'Send Offers' %}</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'feedback:offer' %}">{% trans 'Comments' %}</a>
+                        <a class="nav-link" href="{% url 'feedback:offers' %}">{% trans 'Offers' %}</a>
                     </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link " href="{% url 'common:404' %}">404</a>
-                    </li>
+                    {% if user.is_authenticated %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'users:update' %}">{%trans "Profile"%}</a>
+                        </li>
+                    {% endif %}
 
                     <li class="nav-item">
                         <select class="form-select language-select" aria-label="Select language" onchange="location = this.value;">
@@ -100,7 +101,7 @@
 
                     <h1 class="text-white mb-4">{% trans 'Online platform for requests and offers' %}</h1>
 
-                    <a href="{% url 'feedback:offer_form' %}" class="btn custom-btn smoothscroll me-3">{% trans 'Problems'%}</a>
+                    <a href="{% url 'feedback:send_problem' %}" class="btn custom-btn smoothscroll me-3">{% trans 'Problems'%}</a>
 
                     <a href="{% url 'users:login' %}" class="link link--kale smoothscroll">{%trans "Make an offer"%}</a>
                 </div>

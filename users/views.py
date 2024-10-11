@@ -17,16 +17,13 @@ from users.token import email_verification_token
 
 
 
-def profile_view(request):
-    return render(request, 'profile/profile.html')
-
-
 def verify_email(request, uidb64, token):
     uid = force_str(urlsafe_base64_decode(uidb64))
     user = CustomUserModel.objects.get(pk=uid)
     if user is not None and email_verification_token.check_token(user=user, token=token):
         user.is_active = True
         user.save()
+        messages.success(request, "You have successfully registered!")
         return redirect(reverse_lazy('users:login'))
     else:
         return render(request, 'auth/email_not_verified.html')
@@ -81,6 +78,7 @@ def login_view(request):
 
             if user is not None:
                 login(request, user)
+                messages.success(request, 'Yoy have successfully logged in!')
                 return redirect(reverse_lazy('common:success'))
             else:
                 messages.error(request, _("Invalid username or password."))
@@ -99,6 +97,7 @@ def user_update_view(request):
         form = ProfileUpdateForm(instance=request.user, data=request.POST, files=request.FILES)
         if form.is_valid():
             form.save()
+            messages.success(request, 'Your profile has been updated successfully')
             return redirect(reverse_lazy('common:success'))
         else:
             messages.error(request, _("Invalid data."))

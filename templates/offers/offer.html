@@ -54,26 +54,6 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link click-scroll" href="{% url 'feedback:offer_form' %}">{%trans "Write an offer"%}</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link click-scroll" href="{% url 'common:home' %}">{% trans "Landing page"%}</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link click-scroll" href="{% url 'feedback:comment' %}">{%trans "Comments"%}</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link click-scroll" href="{% url 'common:404' %}">404</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link click-scroll" href="{% url 'users:profile' %}">{%trans "Profile"%}</a>
-                </li>
-
-                <li class="nav-item">
                         <select class="form-select language-select" aria-label="Select language" onchange="location = this.value;">
                         {% get_current_language as LANGUAGE_CODE %}
                         {% get_available_languages as languages %}

@@ -30,6 +30,17 @@
 
 </head>
 <body>
+<div class="parent-div">
+     <div class="mt-5 mb-5">
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-{{ message.tags }}" role="alert">
+                  {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
+    </div>
+</div>
 <div class="container mt-5 form-offer">
     <div class="row">
         <div class="col-md-6 animation-offer-form mb-4">
@@ -43,28 +54,30 @@
                 <button type="button" class="btn btn-secondary active" id="signUpBtn">Problems</button>
             </div>
             <a href="{% url 'common:home' %}" type="button" class="btn btn-secondary back-home">Home</a>
-            <form id="signUpForm">
+            <form id="signUpForm" action="{% url 'feedback:send_problem' %}" method="post">
+                {% csrf_token %}
                 <h4 class="form-title">Submit a problem</h4>
                 <div class="form-group mt-4">
                     <label for="problemTitle">Title</label>
-                    <input type="text" class="form-control" id="problemTitle" placeholder="Enter problem title">
+                    <input name="problem_title" type="text" class="form-control" id="problemTitle" placeholder="Enter problem title">
                 </div>
                 <div class="form-group">
                     <label for="problemDescription">Description</label>
-                    <textarea class="form-control" id="problemDescription"
+                    <textarea name="problem_description" class="form-control" id="problemDescription"
                               placeholder="Enter problem description" maxlength="2000"></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
-            <form id="signInForm" style="display: none;">
-                <h4 class="form-title">Submit a offer</h4>
+            <form action="{% url 'feedback:send_offer' %}" method="post" id="signInForm" style="display: none;">
+                 {% csrf_token %}
+                <h4 class="form-title">Submit an offer</h4>
                 <div class="form-group mt-4">
                     <label for="offerTitle">Title</label>
-                    <input type="text" class="form-control" id="offerTitle" placeholder="Enter offer title">
+                    <input name="offer_title" type="text" class="form-control" id="offerTitle" placeholder="Enter offer title">
                 </div>
                 <div class="form-group">
                     <label for="offerDescription">Description</label>
-                    <textarea class="form-control" id="offerDescription"
+                    <textarea name="offer_description" class="form-control" id="offerDescription"
                               placeholder="Enter offer description" maxlength="2000"></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
