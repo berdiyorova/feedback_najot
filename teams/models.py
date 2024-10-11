@@ -6,6 +6,7 @@ from users.models import CustomUserModel
 
 class EmployeeModel(CustomUserModel):
     position = models.CharField(max_length=255, verbose_name=_("Position of employee"))
+    bio = models.TextField(null=True, blank=True, verbose_name=_("Biography"))
     status = models.BooleanField(default=False)
 
     class Meta:

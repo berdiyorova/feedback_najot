@@ -48,7 +48,8 @@
             </div>
             <div class="register-form">
                 <div class="col-lg-12 col-12 mx-auto">
-                    <form class="custom-form" action="#" method="post" role="form">
+                    <form class="custom-form" action="{% url 'users:register' %}" method="post" role="form">
+                        {% csrf_token %}
                         <div class="text-center mb-5">
                             <p class="mb-1" style="text-align: end">Welcome to <h6 style="text-align: end"><b>Najot
                             Ta'lim Feedback</b></h6></p>
@@ -56,29 +57,49 @@
                         <div>
                             <p style="text-align: start"><b>Register</b></p>
                             <div class="input-group mb-3">
-                                <input type="text" name="full_name" id="full_name"
+                                <input type="text" name="first_name" id="first_name"
                                        class="form-control register-form-input"
-                                       aria-label="full_name" aria-describedby="basic-addon1"
-                                       placeholder="Full name" required>
+                                       aria-label="first_name" aria-describedby="basic-addon1"
+                                       placeholder="First name" required>
 
                                 <span class="input-group-text" id="basic-addon1">
                                             <i class="custom-form-icon bi-person"></i>
                                         </span>
                             </div>
                             <div class="input-group mb-3">
-                                <input type="email" name="user_email" id="email"
+                                <input type="text" name="last_name" id="last_name"
                                        class="form-control register-form-input"
-                                       aria-label="user_email" aria-describedby="basic-addon1"
-                                       placeholder="Email" required>
+                                       aria-label="last_name" aria-describedby="basic-addon1"
+                                       placeholder="Last name" required>
 
                                 <span class="input-group-text" id="basic-addon2">
                                             <i class="custom-form-icon bi-person"></i>
                                         </span>
                             </div>
                             <div class="input-group mb-3">
-                                <input type="password" name="user_password" id="password"
+                                <input type="text" name="username" id="username"
                                        class="form-control register-form-input"
-                                       aria-label="user_password" aria-describedby="basic-addon1"
+                                       aria-label="username" aria-describedby="basic-addon1"
+                                       placeholder="Username" required>
+
+                                <span class="input-group-text" id="basic-addon3">
+                                            <i class="custom-form-icon bi-person"></i>
+                                        </span>
+                            </div>
+                            <div class="input-group mb-3">
+                                <input type="email" name="email" id="email"
+                                       class="form-control register-form-input"
+                                       aria-label="email" aria-describedby="basic-addon1"
+                                       placeholder="Email" required>
+
+                                <span class="input-group-text" id="basic-addon4">
+                                            <i class="custom-form-icon bi-person"></i>
+                                        </span>
+                            </div>
+                            <div class="input-group mb-3">
+                                <input type="password" name="password" id="password"
+                                       class="form-control register-form-input"
+                                       aria-label="password" aria-describedby="basic-addon1"
                                        placeholder="Password" required>
 
                                 <span class="input-group-text" id="basic-addon">
@@ -86,12 +107,12 @@
                                         </span>
                             </div>
                             <div class="input-group mb-3">
-                                <input type="password" name="confirm_password" id="confirm_password"
+                                <input type="password" name="password_confirm" id="password_confirm"
                                        class="form-control register-form-input"
-                                       aria-label="confirm_password" aria-describedby="basic-addon1"
+                                       aria-label="password_confirm" aria-describedby="basic-addon1"
                                        placeholder="Confirm Password" required>
 
-                                <span class="input-group-text" id="basic-addon3">
+                                <span class="input-group-text" id="basic-addon5">
                                             <i class="custom-form-icon bi-person"></i>
                                         </span>
                             </div>

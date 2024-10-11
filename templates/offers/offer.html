@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 {% load static %}
+{% load i18n %}
 
 <html lang="uz">
 <head>
@@ -48,19 +49,19 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-lg-auto me-lg-4">
                 <li class="nav-item">
-                    <a class="nav-link click-scroll" href="{% url 'common:home' %}">Home</a>
+                    <a class="nav-link click-scroll" href="{% url 'common:home' %}">{% trans "Home"%}</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link click-scroll" href="{% url 'feedback:offer_form' %}">Write an offer</a>
+                    <a class="nav-link click-scroll" href="{% url 'feedback:offer_form' %}">{%trans "Write an offer"%}</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link click-scroll" href="{% url 'common:home' %}">Landing page</a>
+                    <a class="nav-link click-scroll" href="{% url 'common:home' %}">{% trans "Landing page"%}</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link click-scroll" href="{% url 'feedback:comment' %}">Comments</a>
+                    <a class="nav-link click-scroll" href="{% url 'feedback:comment' %}">{%trans "Comments"%}</a>
                 </li>
 
                 <li class="nav-item">
@@ -68,7 +69,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link click-scroll" href="{% url 'users:profile' %}">Profile</a>
+                    <a class="nav-link click-scroll" href="{% url 'users:profile' %}">{%trans "Profile"%}</a>
                 </li>
 
                 <li class="nav-item">
@@ -114,7 +115,7 @@
         </div>
     </div>
     <div id="card-container" class="row">
-        <h2 style="margin: 15px 5px">Offers</h2>
+        <h2 style="margin: 15px 5px">{%trans "Offers"%}</h2>
 
         <!--
             Har bitta divni ichida o'zini classi bor. Ya'ni offer cardlari uchun offer degan,

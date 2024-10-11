@@ -1,4 +1,7 @@
 <!doctype html>
+{% load static %}
+{% load i18n %}
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,6 +11,9 @@
     <title>Document</title>
 </head>
 <body>
-<h2>Succes</h2>
+<h2>{% trans "Success!!!"%}</h2>
+<a href="{% url 'common:home' %}">
+    <button class="error__button error__button--active">{% trans "Go to Homepage"%}</button>
+</a>
 </body>
 </html>

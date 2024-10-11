@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 {% load static %}
+{% load i18n %}
 
 <html lang="en">
 <head>
@@ -40,9 +41,9 @@
 <div class="error">
     <div class="error__title">404</div>
     <div class="error__subtitle">Hmmm...</div>
-    <div class="error__description">It looks like one of the developers fell asleep</div>
+    <div class="error__description">{% trans 'It looks like one of the developers fell asleep' %}</div>
     <a href="{% url 'common:home' %}">
-        <button class="error__button error__button--active">Back to Homepage</button>
+        <button class="error__button error__button--active">{% trans "Back to Homepage"%}</button>
     </a>
 </div>
 
