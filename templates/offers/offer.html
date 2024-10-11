@@ -2,6 +2,7 @@
 
 {% load static %}
 {% load i18n %}
+{% load my_tags %}
 
 <html lang="uz">
 <head>
@@ -73,19 +74,23 @@
                 </li>
 
                 <li class="nav-item">
-                    <select class="form-select language-select" aria-label="Select language">
-                        <option value="en" selected>
-                            English
-                        </option>
-                        <option value="uz">
-                            Uzbek
-                        </option>
-                        <option value="ru">
-                            Rus
-                        </option>
+                        <select class="form-select language-select" aria-label="Select language" onchange="location = this.value;">
+                        {% get_current_language as LANGUAGE_CODE %}
+                        {% get_available_languages as languages %}
+                        {% for language in languages %}
+                            {% if language.0 != LANGUAGE_CODE %}
+                                <option value="{% get_full_url request language.0 %}">
+                                    {{ language.1 }}
+                                </option>
+                            {% else %}
+                                <option value="{{ language.0 }}" disabled selected>
+                                    {{ language.1 }}
+                                </option>
+                            {% endif %}
+                        {% endfor %}
                     </select>
 
-                </li>
+                    </li>
             </ul>
         </div>
     </div>
@@ -100,7 +105,7 @@
                 <option value="offers">Show Offers</option>
                 <option value="demands">Show Demands</option>
                 <option value="my-offers">Show My Offers</option>
-                <option value="my-written-offers">Show My Written Offers</option>
+                <option value="my-written-offers">Show My Comments</option>
             </select>
         </div>
         <div class="input-group ml-5">

@@ -11,7 +11,7 @@ from django.utils.translation import gettext_lazy as _
 from django.contrib import messages
 
 from config.settings import EMAIL_HOST_USER
-from users.forms import RegistrationForm, LoginForm
+from users.forms import RegistrationForm, LoginForm, ProfileUpdateForm
 from users.models import CustomUserModel
 from users.token import email_verification_token
 
@@ -93,3 +93,15 @@ def logout_view(request):
     logout(request=request)
     return redirect(reverse_lazy('common:home'))
 
+
+def user_update_view(request):
+    if request.method == 'POST':
+        form = ProfileUpdateForm(instance=request.user, data=request.POST, files=request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect(reverse_lazy('common:success'))
+        else:
+            messages.error(request, _("Invalid data."))
+    else:
+        form = ProfileUpdateForm()
+    return render(request, 'profile/profile.html', {'form': form, 'user': request.user})

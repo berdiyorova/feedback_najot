@@ -36,13 +36,6 @@
             <span>Najot Ta'lim</span>
         </a>
 
-        <div class="d-lg-none ms-auto me-3">
-            <a href="{% url 'users:profile' %}" class="btn custom-btn custom-border-btn btn-naira btn-inverted">
-                <i class="btn-icon bi-person"></i>
-                <span>{%trans "Log in"%}</span>
-            </a>
-        </div>
-
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -75,61 +68,51 @@
                 </li>
             </ul>
 
-            <div class="d-none d-lg-block">
-                <a href="{% url 'users:login' %}"
-                   class="btn custom-btn custom-border-btn btn-naira btn-inverted">
-                    <i class="btn-icon bi-person"></i>
-                    <span>{% trans "Log in" %}</span>
-                </a>
-            </div>
         </div>
     </div>
 </nav>
 
+<div class="parent-div">
+     <div class="mt-5 mb-5">
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-{{ message.tags }}" role="alert">
+                  {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
+    </div>
+
 <!-- Profile page content-->
 <div class="container-xl px-4 mt-4">
     <div class="row">
-        <div class="col-xl-4">
-            <!-- Profile picture card-->
-            <div class="card mb-4 mb-xl-0">
-                <div class="card-header">{% trans "Profile Picture" %}</div>
-                <div class="card-body text-center">
-                    <!-- Profile picture image-->
-                    <img class="img-account-profile rounded-circle mb-2"
-                         src="http://bootdey.com/img/Content/avatar/avatar1.png" alt="">
-                    <!-- Profile picture help block-->
-                    <div class="small font-italic text-muted mb-4">{% trans "JPG or PNG no larger than 5 MB" %}</div>
-                    <!-- Profile picture upload button-->
-                    <button class="btn" type="button">{% trans "Upload new image" %}</button>
-                </div>
-            </div>
-        </div>
         <div class="col-xl-8">
             <!-- Account details card-->
             <div class="card mb-4">
                 <div class="card-header">{% trans "Account Details" %}</div>
                 <div class="card-body">
-                    <form>
+                    <form action="{% url 'users:update' %}" method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+
                         <!-- Form Group (username)-->
                         <div class="mb-3">
-                            <label class="small mb-1" for="inputUsername">Username ({% trans "how your name will appear to other
-                                users on the site" %})</label>
+                            <label class="small mb-1" for="inputUsername">Username</label>
                             <input class="form-control" id="inputUsername" type="text" placeholder="Enter your username"
-                                   value="username">
+                                   name="username" value="{{user.username}}">
                         </div>
                         <!-- Form Row-->
                         <div class="row gx-3 mb-3">
                             <!-- Form Group (first name)-->
                             <div class="col-md-6">
                                 <label class="small mb-1" for="inputFirstName">{% trans "First name" %}</label>
-                                <input class="form-control" id="inputFirstName" type="text"
-                                       placeholder="Enter your first name" value="Valerie">
+                                <input class="form-control" id="inputFirstName" type="text" name="first_name"
+                                       placeholder="Enter your first name" value="{{user.first_name}}">
                             </div>
                             <!-- Form Group (last name)-->
                             <div class="col-md-6">
                                 <label class="small mb-1" for="inputLastName">{% trans "Last name"%}</label>
-                                <input class="form-control" id="inputLastName" type="text"
-                                       placeholder="Enter your last name" value="Luna">
+                                <input class="form-control" id="inputLastName" type="text" name="last_name"
+                                       placeholder="Enter your last name" value="{{user.last_name}}">
                             </div>
                         </div>
                         <!-- Form Row        -->
@@ -137,32 +120,39 @@
                             <!-- Form Group (organization name)-->
                             <div class="col-md-6">
                                 <label class="small mb-1" for="inputOrgName">{% trans "Organization name"%}</label>
-                                <input class="form-control" id="inputOrgName" type="text"
+                                <input class="form-control" id="inputOrgName" type="text" name="organization"
                                        placeholder="Enter your organization name" value="Start Bootstrap">
                             </div>
                             <!-- Form Group (location)-->
                             <div class="col-md-6">
                                 <label class="small mb-1" for="inputLocation">{% trans "Location"%}</label>
-                                <input class="form-control" id="inputLocation" type="text"
+                                <input class="form-control" id="inputLocation" type="text" name="location"
                                        placeholder="Enter your location" value="San Francisco, CA">
                             </div>
                         </div>
                         <!-- Form Group (email address)-->
                         <div class="mb-3">
                             <label class="small mb-1" for="inputEmailAddress">Email {% trans "address"%}</label>
-                            <input class="form-control" id="inputEmailAddress" type="email"
-                                   placeholder="Enter your email address" value="name@example.com" readonly
+                            <input class="form-control" id="inputEmailAddress" type="email" name="email"
+                                   placeholder="Enter your email address" value="{{user.email}}" readonly
                                    style="cursor: not-allowed;">
                         </div>
                         <!-- Linkedin profile link-->
                         <div class="mb-3">
                             <label class="small mb-1" for="linkedinProfileLink">{% trans "Linkedin profile link"%}</label>
-                            <input class="form-control" id="linkedinProfileLink" type="email"
-                                   placeholder="Enter your Linkedin profile link"
-                                   value="https://www.linkedin.com/in/valerie-luna-123456789">
+                            <input class="form-control" id="linkedinProfileLink" type="text"
+                                   placeholder="Enter your Linkedin profile link" name="linkedin"
+                                   value="{{user.linkedin}}">
+                        </div>
+                        <!-- Profile photo -->
+                        <div class="mb-3">
+                            <label class="small mb-1" for="photo">{% trans "Select a photo (jpg or jpeg or png)" %}</label>
+                            <input class="form-control" id="photo" type="file"
+                                   placeholder="Select a photo" name="photo"
+                                   accept=".jpg, .jpeg, .png"> <!-- Restrict to jpg, jpeg, and png formats -->
                         </div>
                         <!-- Save changes button-->
-                        <button class="btn" type="button">{% trans "Save changes"%}</button>
+                        <button class="btn" type="submit">{% trans "Save changes"%}</button>
                     </form>
                 </div>
             </div>

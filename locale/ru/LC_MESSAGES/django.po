@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-09 05:32+0500\n"
+"POT-Creation-Date: 2024-10-11 13:14+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -40,7 +40,8 @@ msgstr ""
 msgid "Comment"
 msgstr ""
 
-#: .\feedback\models.py:22 .\templates\index.html:44
+#: .\feedback\models.py:22 .\templates\index.html:45
+#: .\templates\offers\offer.html:65 .\templates\profile\profile.html:63
 msgid "Comments"
 msgstr ""
 
@@ -56,50 +57,241 @@ msgstr ""
 msgid "Problem"
 msgstr ""
 
-#: .\feedback\models.py:31 .\templates\index.html:36
+#: .\feedback\models.py:31 .\templates\index.html:37 .\templates\index.html:103
 msgid "Problems"
 msgstr ""
 
-#: .\feedback\models.py:42 .\users\models.py:14
+#: .\feedback\models.py:43 .\users\models.py:39
 msgid "User"
 msgstr ""
 
-#: .\feedback\models.py:46
+#: .\feedback\models.py:47
 msgid "Offer"
 msgstr ""
 
-#: .\feedback\models.py:47 .\templates\index.html:40
+#: .\feedback\models.py:48 .\templates\index.html:41
+#: .\templates\offers\offer.html:123
 msgid "Offers"
+msgstr ""
+
+#: .\feedback\models.py:52
+msgid "Question title"
+msgstr ""
+
+#: .\feedback\models.py:53
+msgid "Question text"
+msgstr ""
+
+#: .\feedback\models.py:54
+msgid "Answer"
 msgstr ""
 
 #: .\teams\models.py:8
 msgid "Position of employee"
 msgstr ""
 
-#: .\teams\models.py:11
+#: .\teams\models.py:9
+msgid "Biography"
+msgstr ""
+
+#: .\teams\models.py:13
 msgid "Employee"
 msgstr ""
 
-#: .\teams\models.py:12
+#: .\teams\models.py:14
 msgid "Employees"
 msgstr ""
 
-#: .\templates\index.html:32
+#: .\templates\404.html:44
+msgid "It looks like one of the developers fell asleep"
+msgstr ""
+
+#: .\templates\404.html:46
+msgid "Back to Homepage"
+msgstr ""
+
+#: .\templates\index.html:20
+msgid "Log in"
+msgstr ""
+
+#: .\templates\index.html:33 .\templates\index.html:709
+#: .\templates\offers\offer.html:53 .\templates\profile\profile.html:47
 msgid "Home"
 msgstr ""
 
-#: .\users\models.py:9
-msgid "Organization"
+#: .\templates\index.html:79
+msgid "Logout"
 msgstr ""
 
-#: .\users\models.py:10
+#: .\templates\index.html:85
+msgid "Login"
+msgstr ""
+
+#: .\templates\index.html:99
+msgid "Exchange of ideas"
+msgstr ""
+
+#: .\templates\index.html:101
+msgid "Online platform for requests and offers"
+msgstr ""
+
+#: .\templates\index.html:105
+msgid "Make an offer"
+msgstr ""
+
+#: .\templates\index.html:133
+msgid "Brief information about the site"
+msgstr ""
+
+#: .\templates\index.html:136
+msgid "Feedback"
+msgstr ""
+
+#: .\templates\index.html:138
+msgid ""
+" The Najot Ta'lim Feedback Site is designed to collect and analyze feedback "
+"on services,\n"
+"                            classes, and overall experiences at the Najot "
+"Ta'lim educational center. The site allows\n"
+"                            students and their parents to identify strengths "
+"and areas for improvement at the center.\n"
+"                            Feedback is gathered through an online form, "
+"enhancing transparency and openness. The\n"
+"                            collected feedback is used to improve services "
+"and introduce new opportunities. The site\n"
+"                            also showcases the center’s achievements and "
+"successes, providing inspiration and\n"
+"                            strengthening its image."
+msgstr ""
+
+#: .\templates\index.html:158
+msgid "Questions - Answers"
+msgstr ""
+
+#: .\templates\index.html:160
+msgid "Frequently asked questions"
+msgstr ""
+
+#: .\templates\index.html:240 .\templates\profile\profile.html:55
+msgid "Team"
+msgstr ""
+
+#: .\templates\index.html:242
+msgid "About the participants in the team"
+msgstr ""
+
+#: .\templates\index.html:257 .\templates\index.html:313
+#: .\templates\index.html:343 .\templates\index.html:373
+#: .\templates\index.html:403
+msgid "The founder of the project"
+msgstr ""
+
+#: .\templates\index.html:287
+msgid "Frontend Developer for the project"
+msgstr ""
+
+#: .\templates\index.html:441 .\templates\profile\profile.html:59
+msgid "Appeals"
+msgstr ""
+
+#: .\templates\index.html:443
+msgid "Best offers"
+msgstr ""
+
+#: .\templates\index.html:458 .\templates\index.html:495
+#: .\templates\index.html:535 .\templates\index.html:576
+#: .\templates\index.html:613 .\templates\index.html:650
+msgid "Student"
+msgstr ""
+
+#: .\templates\index.html:712
+msgid "Terms"
+msgstr ""
+
+#: .\templates\index.html:715
+msgid "Privacy Policy"
+msgstr ""
+
+#: .\templates\index.html:718
+msgid "Contact"
+msgstr ""
+
+#: .\templates\offers\offer.html:57
+msgid "Write an offer"
+msgstr ""
+
+#: .\templates\offers\offer.html:61
+msgid "Landing page"
+msgstr ""
+
+#: .\templates\offers\offer.html:73
+msgid "Profile"
+msgstr ""
+
+#: .\templates\profile\profile.html:51
+msgid "The Site"
+msgstr ""
+
+#: .\templates\profile\profile.html:92
+msgid "Account Details"
+msgstr ""
+
+#: .\templates\profile\profile.html:107
+msgid "First name"
+msgstr ""
+
+#: .\templates\profile\profile.html:113
+msgid "Last name"
+msgstr ""
+
+#: .\templates\profile\profile.html:122
+msgid "Organization name"
+msgstr ""
+
+#: .\templates\profile\profile.html:128 .\users\models.py:29
 msgid "Location"
 msgstr ""
 
-#: .\users\models.py:11
+#: .\templates\profile\profile.html:135
+msgid "address"
+msgstr ""
+
+#: .\templates\profile\profile.html:142
+msgid "Linkedin profile link"
+msgstr ""
+
+#: .\templates\profile\profile.html:149
+msgid "Select a photo (jpg or jpeg or png)"
+msgstr ""
+
+#: .\templates\profile\profile.html:155
+msgid "Save changes"
+msgstr ""
+
+#: .\templates\success\success.html:14
+msgid "Success!!!"
+msgstr ""
+
+#: .\templates\success\success.html:16
+msgid "Go to Homepage"
+msgstr ""
+
+#: .\users\models.py:28
+msgid "Organization"
+msgstr ""
+
+#: .\users\models.py:30
 msgid "linkedin"
 msgstr ""
 
-#: .\users\models.py:15
+#: .\users\models.py:40
 msgid "Users"
+msgstr ""
+
+#: .\users\views.py:86
+msgid "Invalid username or password."
+msgstr ""
+
+#: .\users\views.py:104
+msgid "Invalid data."
 msgstr ""
