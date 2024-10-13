@@ -85,8 +85,10 @@
                 <select class="form-select" id='data-selector' aria-label="Select category" onchange="window.location.href=this.value;">
                     <option value="#">Show Offers</option>
                     <option value="#">Show Demands</option>
-                    <option value="#">Show My Offers</option>
-                    <option value="{% url 'feedback:comments' %}">Show My Comments</option>
+                    {% if user.is_authenticated %}
+                        <option value="#">Show My Offers</option>
+                        <option value="{% url 'feedback:comments' %}">Show My Comments</option>
+                    {% endif %}
                     <!-- Add other options if necessary -->
                 </select>
             </form>
