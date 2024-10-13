@@ -1,9 +1,5 @@
-from modeltranslation.translator import translator, TranslationOptions, register
-from feedback.models import CommentsModel, OfferModel, ProblemModel
-
-@register(CommentsModel)
-class CommentTranslationOptions(TranslationOptions):
-    fields = ('text',)
+from modeltranslation.translator import TranslationOptions, register
+from feedback.models import OfferModel, ProblemModel, QuestionModel
 
 @register(OfferModel)
 class OfferTranslationOptions(TranslationOptions):
@@ -12,3 +8,7 @@ class OfferTranslationOptions(TranslationOptions):
 @register(ProblemModel)
 class ProblemTranslationOptions(TranslationOptions):
     fields = ('title', 'description')
+
+@register(QuestionModel)
+class QuestionTranslationOptions(TranslationOptions):
+    fields = ('question', 'answer')

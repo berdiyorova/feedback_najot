@@ -1,6 +1,6 @@
-from modeltranslation.translator import translator, TranslationOptions, register
+from modeltranslation.translator import TranslationOptions, register
 from teams.models import EmployeeModel
 
 @register(EmployeeModel)
 class EmployeeTranslationOptions(TranslationOptions):
-    fields = ('position',)
+    fields = ('position', 'bio')

@@ -28,9 +28,13 @@ class CustomUserModel(AbstractUser, AbstractBaseModel):
     organization = models.CharField(max_length=255, verbose_name=_("Organization"))
     location = models.CharField(max_length=255, verbose_name=_("Location"))
     linkedin = models.URLField(max_length=255, verbose_name=_("linkedin"))
-    photo = models.ImageField(upload_to="users/", default="user_default_photo.png")
+    photo = models.ImageField(upload_to="users/", default="users/user_default_photo.png")
 
     objects = MyUserManager()
+
+    @property
+    def full_name(self):
+        return self.get_full_name()
 
     def __str__(self):
         return self.username

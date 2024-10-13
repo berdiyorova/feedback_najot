@@ -1,4 +1,5 @@
 from django.contrib import messages
+from django.db.models import Q
 from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
 
@@ -44,9 +45,29 @@ def offers_view(request):
     offers = OfferModel.objects.all()
     problems = ProblemModel.objects.all()
     my_offers = OfferModel.objects.filter(user=request.user)
+
+    search_query = request.GET.get('q', '')
+    if search_query:
+        offers = OfferModel.objects.filter(Q(title__icontains=search_query) | Q(description__icontains=search_query))
+        problems = ProblemModel.objects.filter(Q(title__icontains=search_query) | Q(description__icontains=search_query))
+
     context = {
         'offers': offers,
         'problems': problems,
         'my_offers': my_offers
     }
     return render(request, 'offers/offer.html', context)
+
+
+def offer_or_problem_detail_view(request, pk):
+    if request.method == 'GET':
+        offer = OfferModel.objects.filter(id=pk).first()
+        problem = ProblemModel.objects.filter(id=pk).first()
+
+        context = {
+            'offer': offer,
+            'problem': problem,
+        }
+        return render(request, 'comments/comment.html', context)
+
+    return render(request, 'index.html')

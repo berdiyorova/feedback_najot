@@ -21,9 +21,10 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('ckeditor/', include('ckeditor_uploader.urls')),
 ]
 urlpatterns += i18n_patterns(
+    path('admin/', admin.site.urls),
     path('i18n/', include('django.conf.urls.i18n')),
     path('user/', include('users.urls', namespace='users')),
     path('feedback/', include('feedback.urls', namespace='feedback')),

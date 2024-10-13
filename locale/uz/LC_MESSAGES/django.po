@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-11 13:14+0500\n"
+"POT-Creation-Date: 2024-10-13 14:41+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,63 +26,60 @@ msgstr "Yaratilgan vaqti"
 msgid "Updated time"
 msgstr "Yangilangan vaqti"
 
-#: .\feedback\models.py:8
-msgid "Comment text"
-msgstr "Izoh matni"
-
-#: .\feedback\models.py:17
-msgid "Comment user"
-msgstr "Izoh muallifi"
-
-#: .\feedback\models.py:21
-msgid "Comment"
-msgstr "Izoh"
-
-#: .\feedback\models.py:22 .\templates\index.html:45
-#: .\templates\offers\offer.html:65 .\templates\profile\profile.html:63
-msgid "Comments"
-msgstr "Izohlar"
-
-#: .\feedback\models.py:26 .\feedback\models.py:35
+#: .\feedback\models.py:9 .\feedback\models.py:24
 msgid "Title"
 msgstr "Sarlavha"
 
-#: .\feedback\models.py:27 .\feedback\models.py:36
+#: .\feedback\models.py:10 .\feedback\models.py:25
 msgid "Description"
 msgstr "Matn"
 
-#: .\feedback\models.py:30
+#: .\feedback\models.py:19
 msgid "Problem"
 msgstr "Shikoyat"
 
-#: .\feedback\models.py:31 .\templates\index.html:37 .\templates\index.html:103
+#: .\feedback\models.py:20 .\templates\index.html:104
+#: .\templates\offers\offer.html:107
 msgid "Problems"
 msgstr "Shikoyatlar"
 
-#: .\feedback\models.py:43 .\users\models.py:39
+#: .\feedback\models.py:35 .\users\models.py:43
 msgid "User"
 msgstr "Foydalanuvchi"
 
-#: .\feedback\models.py:47
+#: .\feedback\models.py:42
 msgid "Offer"
 msgstr "Taklif"
 
-#: .\feedback\models.py:48 .\templates\index.html:41
-#: .\templates\offers\offer.html:123
+#: .\feedback\models.py:43 .\templates\index.html:45
+#: .\templates\offers\offer.html:107
 msgid "Offers"
 msgstr "Takliflar"
 
-#: .\feedback\models.py:52
-msgid "Question title"
-msgstr ""
+#: .\feedback\models.py:47
+msgid "Comment text"
+msgstr "Izoh matni"
 
 #: .\feedback\models.py:53
-msgid "Question text"
-msgstr ""
+msgid "Comment user"
+msgstr "Izoh muallifi"
 
-#: .\feedback\models.py:54
+#: .\feedback\models.py:55 .\feedback\models.py:56 .\feedback\models.py:63
+#: .\templates\profile\profile.html:63
+msgid "Comments"
+msgstr "Izohlar"
+
+#: .\feedback\models.py:62
+msgid "Comment"
+msgstr "Izoh"
+
+#: .\feedback\models.py:67
+msgid "Question text"
+msgstr "Savol mazmuni"
+
+#: .\feedback\models.py:68
 msgid "Answer"
-msgstr ""
+msgstr "Javob"
 
 #: .\teams\models.py:8
 msgid "Position of employee"
@@ -90,7 +87,7 @@ msgstr "Xodim lavozimi"
 
 #: .\teams\models.py:9
 msgid "Biography"
-msgstr ""
+msgstr "Biografiya"
 
 #: .\teams\models.py:13
 msgid "Employee"
@@ -102,50 +99,62 @@ msgstr "Xodimlar"
 
 #: .\templates\404.html:44
 msgid "It looks like one of the developers fell asleep"
-msgstr ""
+msgstr "Xatolik yuz berdi. Sahifa topilmadi."
 
 #: .\templates\404.html:46
 msgid "Back to Homepage"
-msgstr ""
+msgstr "Bosh sahifaga"
 
 #: .\templates\index.html:20
 msgid "Log in"
-msgstr ""
+msgstr "Kirish"
 
-#: .\templates\index.html:33 .\templates\index.html:709
+#: .\templates\index.html:33 .\templates\index.html:348
 #: .\templates\offers\offer.html:53 .\templates\profile\profile.html:47
 msgid "Home"
 msgstr "Bosh sahifa"
 
-#: .\templates\index.html:79
+#: .\templates\index.html:37
+msgid "Send Problem"
+msgstr "Shikoyat yuborish"
+
+#: .\templates\index.html:41
+msgid "Send Offers"
+msgstr "Taklif kiritish"
+
+#: .\templates\index.html:49
+msgid "Profile"
+msgstr "Profil"
+
+#: .\templates\index.html:80
 msgid "Logout"
-msgstr ""
+msgstr "Chiqish"
 
-#: .\templates\index.html:85
+#: .\templates\index.html:86
 msgid "Login"
-msgstr ""
+msgstr "Kirish"
 
-#: .\templates\index.html:99
+#: .\templates\index.html:100
 msgid "Exchange of ideas"
-msgstr ""
+msgstr "Fikr almashish"
 
-#: .\templates\index.html:101
+#: .\templates\index.html:102
 msgid "Online platform for requests and offers"
-msgstr ""
+msgstr "So'rovlar va takliflar uchun onlayn platforma"
 
-#: .\templates\index.html:105
+#: .\templates\index.html:106
 msgid "Make an offer"
-msgstr ""
+msgstr "Taklif kiritish"
 
-#: .\templates\index.html:133
+#: .\templates\index.html:134
 msgid "Brief information about the site"
-msgstr ""
+msgstr "Sayt haqida qisqacha ma'lumot"
 
-#: .\templates\index.html:136
+#: .\templates\index.html:137
 msgid "Feedback"
-msgstr ""
+msgstr "Fikr-mulohaza"
 
-#: .\templates\index.html:138
+#: .\templates\index.html:139
 msgid ""
 " The Najot Ta'lim Feedback Site is designed to collect and analyze feedback "
 "on services,\n"
@@ -161,120 +170,120 @@ msgid ""
 "successes, providing inspiration and\n"
 "                            strengthening its image."
 msgstr ""
+"Najot Ta'lim Fikr-mulohazalar Sayti xizmatlar bo'yicha, darslar "
+"va                             umumiy tajribalar bo'yicha fikr-mulohazalarni "
+"to'plash va tahlil qilish uchun mo'ljallangan.\n"
+"Sayt o'quvchilar va ularning ota-onalariga markazning muhim "
+"tomonlari                             va takomillashtirish yo'nalishlarini "
+"aniqlash imkonini beradi.\n"
+"Fikr-mulohaza onlayn shaklda yig'iladi va                             "
+"shaffoflik va ochiqlikni ta'minlanadi.\n"
+"To'plangan fikr-mulohazalar xizmatlarni "
+"yaxshilash                             va yangi imkoniyatlarni taqdim etish "
+"uchun ko'rib chiqiladi. Sayt\n"
+"Sayt shuningdek, markazning yutuq va muvaffaqiyatlarini namoyish "
+"etadi,                             ilhom bag'ishlaydi va uning obro'sini "
+"mustahkamlaydi."
 
-#: .\templates\index.html:158
+#: .\templates\index.html:159
 msgid "Questions - Answers"
-msgstr ""
+msgstr "Savollarga Javoblar"
 
-#: .\templates\index.html:160
+#: .\templates\index.html:161
 msgid "Frequently asked questions"
-msgstr ""
+msgstr "Ko'p so'raladigan savollar"
 
-#: .\templates\index.html:240 .\templates\profile\profile.html:55
+#: .\templates\index.html:195 .\templates\profile\profile.html:55
 msgid "Team"
-msgstr ""
+msgstr "Jamoa"
 
-#: .\templates\index.html:242
+#: .\templates\index.html:197
 msgid "About the participants in the team"
-msgstr ""
+msgstr "Jamoadagi ishtirokchilar haqida"
 
-#: .\templates\index.html:257 .\templates\index.html:313
-#: .\templates\index.html:343 .\templates\index.html:373
-#: .\templates\index.html:403
-msgid "The founder of the project"
-msgstr ""
-
-#: .\templates\index.html:287
-msgid "Frontend Developer for the project"
-msgstr ""
-
-#: .\templates\index.html:441 .\templates\profile\profile.html:59
+#: .\templates\index.html:245 .\templates\profile\profile.html:59
 msgid "Appeals"
-msgstr ""
+msgstr "Murojaatlar"
 
-#: .\templates\index.html:443
+#: .\templates\index.html:247
 msgid "Best offers"
-msgstr ""
+msgstr "Eng yaxshi takliflar"
 
-#: .\templates\index.html:458 .\templates\index.html:495
-#: .\templates\index.html:535 .\templates\index.html:576
-#: .\templates\index.html:613 .\templates\index.html:650
+#: .\templates\index.html:263 .\templates\index.html:297
 msgid "Student"
-msgstr ""
+msgstr "Talaba"
 
-#: .\templates\index.html:712
+#: .\templates\index.html:351
 msgid "Terms"
-msgstr ""
+msgstr "Shartlar"
 
-#: .\templates\index.html:715
+#: .\templates\index.html:354
 msgid "Privacy Policy"
-msgstr ""
+msgstr "Maxfiylik siyosati"
 
-#: .\templates\index.html:718
+#: .\templates\index.html:357
 msgid "Contact"
-msgstr ""
+msgstr "biz bilan aloqa"
 
-#: .\templates\offers\offer.html:57
-msgid "Write an offer"
-msgstr ""
+#: .\templates\offers\offer.html:152
+msgid "Anonym user"
+msgstr "Anonim foydalanuvchi"
 
-#: .\templates\offers\offer.html:61
-msgid "Landing page"
-msgstr ""
+#: .\templates\offers\offer.html:201
+msgid "Previous"
+msgstr "Oldingi"
 
-#: .\templates\offers\offer.html:73
-msgid "Profile"
-msgstr ""
+#: .\templates\offers\offer.html:202
+msgid "Next"
+msgstr "Keyingi"
 
 #: .\templates\profile\profile.html:51
 msgid "The Site"
-msgstr ""
+msgstr "Sayt haqida"
 
 #: .\templates\profile\profile.html:92
 msgid "Account Details"
-msgstr ""
+msgstr "Akkount ma'lumotlari"
 
 #: .\templates\profile\profile.html:107
 msgid "First name"
-msgstr ""
+msgstr "Ism"
 
 #: .\templates\profile\profile.html:113
 msgid "Last name"
-msgstr ""
+msgstr "Familiya"
 
 #: .\templates\profile\profile.html:122
-#, fuzzy
-#| msgid "Organization"
 msgid "Organization name"
 msgstr "Tashkilot"
 
 #: .\templates\profile\profile.html:128 .\users\models.py:29
 msgid "Location"
-msgstr "Manzil"
+msgstr "Lokatsiya"
 
 #: .\templates\profile\profile.html:135
 msgid "address"
-msgstr ""
+msgstr "Manzil"
 
 #: .\templates\profile\profile.html:142
 msgid "Linkedin profile link"
-msgstr ""
+msgstr "linkedin profil link"
 
 #: .\templates\profile\profile.html:149
 msgid "Select a photo (jpg or jpeg or png)"
-msgstr ""
+msgstr "Rasm tanlang"
 
 #: .\templates\profile\profile.html:155
 msgid "Save changes"
-msgstr ""
+msgstr "O'zgarishlarni saqlash"
 
-#: .\templates\success\success.html:14
+#: .\templates\success\success.html:17
 msgid "Success!!!"
-msgstr ""
+msgstr "Muvaffaqiyatli!!!"
 
-#: .\templates\success\success.html:16
+#: .\templates\success\success.html:31
 msgid "Go to Homepage"
-msgstr ""
+msgstr "Bosh sahifaga"
 
 #: .\users\models.py:28
 msgid "Organization"
@@ -284,14 +293,29 @@ msgstr "Tashkilot"
 msgid "linkedin"
 msgstr "Linkedin"
 
-#: .\users\models.py:40
+#: .\users\models.py:44
 msgid "Users"
 msgstr "Foydalanuvchilar"
 
-#: .\users\views.py:86
+#: .\users\views.py:84
 msgid "Invalid username or password."
-msgstr ""
+msgstr "Username yoki parol noto'g'ri"
 
-#: .\users\views.py:104
+#: .\users\views.py:103
 msgid "Invalid data."
-msgstr ""
+msgstr "Noto'g'ri ma'lumot kiritildi"
+
+#~ msgid "Question title"
+#~ msgstr "Savol mavzusi"
+
+#~ msgid "The founder of the project"
+#~ msgstr "Loyiha asoschisi"
+
+#~ msgid "Frontend Developer for the project"
+#~ msgstr "Loyiha uchun frontend dasturchi"
+
+#~ msgid "Write an offer"
+#~ msgstr "Taklif kiritish"
+
+#~ msgid "Landing page"
+#~ msgstr "Bosh sahifa"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-11 13:14+0500\n"
+"POT-Creation-Date: 2024-10-13 14:41+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,61 +26,58 @@ msgstr ""
 msgid "Updated time"
 msgstr ""
 
-#: .\feedback\models.py:8
-msgid "Comment text"
-msgstr ""
-
-#: .\feedback\models.py:17
-msgid "Comment user"
-msgstr ""
-
-#: .\feedback\models.py:21
-msgid "Comment"
-msgstr ""
-
-#: .\feedback\models.py:22 .\templates\index.html:45
-#: .\templates\offers\offer.html:65 .\templates\profile\profile.html:63
-msgid "Comments"
-msgstr ""
-
-#: .\feedback\models.py:26 .\feedback\models.py:35
+#: .\feedback\models.py:9 .\feedback\models.py:24
 msgid "Title"
 msgstr ""
 
-#: .\feedback\models.py:27 .\feedback\models.py:36
+#: .\feedback\models.py:10 .\feedback\models.py:25
 msgid "Description"
 msgstr ""
 
-#: .\feedback\models.py:30
+#: .\feedback\models.py:19
 msgid "Problem"
 msgstr ""
 
-#: .\feedback\models.py:31 .\templates\index.html:37 .\templates\index.html:103
+#: .\feedback\models.py:20 .\templates\index.html:104
+#: .\templates\offers\offer.html:107
 msgid "Problems"
 msgstr ""
 
-#: .\feedback\models.py:43 .\users\models.py:39
+#: .\feedback\models.py:35 .\users\models.py:43
 msgid "User"
 msgstr ""
 
-#: .\feedback\models.py:47
+#: .\feedback\models.py:42
 msgid "Offer"
 msgstr ""
 
-#: .\feedback\models.py:48 .\templates\index.html:41
-#: .\templates\offers\offer.html:123
+#: .\feedback\models.py:43 .\templates\index.html:45
+#: .\templates\offers\offer.html:107
 msgid "Offers"
 msgstr ""
 
-#: .\feedback\models.py:52
-msgid "Question title"
+#: .\feedback\models.py:47
+msgid "Comment text"
 msgstr ""
 
 #: .\feedback\models.py:53
+msgid "Comment user"
+msgstr ""
+
+#: .\feedback\models.py:55 .\feedback\models.py:56 .\feedback\models.py:63
+#: .\templates\profile\profile.html:63
+msgid "Comments"
+msgstr ""
+
+#: .\feedback\models.py:62
+msgid "Comment"
+msgstr ""
+
+#: .\feedback\models.py:67
 msgid "Question text"
 msgstr ""
 
-#: .\feedback\models.py:54
+#: .\feedback\models.py:68
 msgid "Answer"
 msgstr ""
 
@@ -112,40 +109,52 @@ msgstr ""
 msgid "Log in"
 msgstr ""
 
-#: .\templates\index.html:33 .\templates\index.html:709
+#: .\templates\index.html:33 .\templates\index.html:348
 #: .\templates\offers\offer.html:53 .\templates\profile\profile.html:47
 msgid "Home"
 msgstr ""
 
-#: .\templates\index.html:79
+#: .\templates\index.html:37
+msgid "Send Problem"
+msgstr ""
+
+#: .\templates\index.html:41
+msgid "Send Offers"
+msgstr ""
+
+#: .\templates\index.html:49
+msgid "Profile"
+msgstr ""
+
+#: .\templates\index.html:80
 msgid "Logout"
 msgstr ""
 
-#: .\templates\index.html:85
+#: .\templates\index.html:86
 msgid "Login"
 msgstr ""
 
-#: .\templates\index.html:99
+#: .\templates\index.html:100
 msgid "Exchange of ideas"
 msgstr ""
 
-#: .\templates\index.html:101
+#: .\templates\index.html:102
 msgid "Online platform for requests and offers"
 msgstr ""
 
-#: .\templates\index.html:105
+#: .\templates\index.html:106
 msgid "Make an offer"
 msgstr ""
 
-#: .\templates\index.html:133
+#: .\templates\index.html:134
 msgid "Brief information about the site"
 msgstr ""
 
-#: .\templates\index.html:136
+#: .\templates\index.html:137
 msgid "Feedback"
 msgstr ""
 
-#: .\templates\index.html:138
+#: .\templates\index.html:139
 msgid ""
 " The Najot Ta'lim Feedback Site is designed to collect and analyze feedback "
 "on services,\n"
@@ -162,68 +171,56 @@ msgid ""
 "                            strengthening its image."
 msgstr ""
 
-#: .\templates\index.html:158
+#: .\templates\index.html:159
 msgid "Questions - Answers"
 msgstr ""
 
-#: .\templates\index.html:160
+#: .\templates\index.html:161
 msgid "Frequently asked questions"
 msgstr ""
 
-#: .\templates\index.html:240 .\templates\profile\profile.html:55
+#: .\templates\index.html:195 .\templates\profile\profile.html:55
 msgid "Team"
 msgstr ""
 
-#: .\templates\index.html:242
+#: .\templates\index.html:197
 msgid "About the participants in the team"
 msgstr ""
 
-#: .\templates\index.html:257 .\templates\index.html:313
-#: .\templates\index.html:343 .\templates\index.html:373
-#: .\templates\index.html:403
-msgid "The founder of the project"
-msgstr ""
-
-#: .\templates\index.html:287
-msgid "Frontend Developer for the project"
-msgstr ""
-
-#: .\templates\index.html:441 .\templates\profile\profile.html:59
+#: .\templates\index.html:245 .\templates\profile\profile.html:59
 msgid "Appeals"
 msgstr ""
 
-#: .\templates\index.html:443
+#: .\templates\index.html:247
 msgid "Best offers"
 msgstr ""
 
-#: .\templates\index.html:458 .\templates\index.html:495
-#: .\templates\index.html:535 .\templates\index.html:576
-#: .\templates\index.html:613 .\templates\index.html:650
+#: .\templates\index.html:263 .\templates\index.html:297
 msgid "Student"
 msgstr ""
 
-#: .\templates\index.html:712
+#: .\templates\index.html:351
 msgid "Terms"
 msgstr ""
 
-#: .\templates\index.html:715
+#: .\templates\index.html:354
 msgid "Privacy Policy"
 msgstr ""
 
-#: .\templates\index.html:718
+#: .\templates\index.html:357
 msgid "Contact"
 msgstr ""
 
-#: .\templates\offers\offer.html:57
-msgid "Write an offer"
+#: .\templates\offers\offer.html:152
+msgid "Anonym user"
 msgstr ""
 
-#: .\templates\offers\offer.html:61
-msgid "Landing page"
+#: .\templates\offers\offer.html:201
+msgid "Previous"
 msgstr ""
 
-#: .\templates\offers\offer.html:73
-msgid "Profile"
+#: .\templates\offers\offer.html:202
+msgid "Next"
 msgstr ""
 
 #: .\templates\profile\profile.html:51
@@ -266,11 +263,11 @@ msgstr ""
 msgid "Save changes"
 msgstr ""
 
-#: .\templates\success\success.html:14
+#: .\templates\success\success.html:17
 msgid "Success!!!"
 msgstr ""
 
-#: .\templates\success\success.html:16
+#: .\templates\success\success.html:31
 msgid "Go to Homepage"
 msgstr ""
 
@@ -282,14 +279,14 @@ msgstr ""
 msgid "linkedin"
 msgstr ""
 
-#: .\users\models.py:40
+#: .\users\models.py:44
 msgid "Users"
 msgstr ""
 
-#: .\users\views.py:86
+#: .\users\views.py:84
 msgid "Invalid username or password."
 msgstr ""
 
-#: .\users\views.py:104
+#: .\users\views.py:103
 msgid "Invalid data."
 msgstr ""
