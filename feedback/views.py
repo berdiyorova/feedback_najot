@@ -44,7 +44,9 @@ def send_offer_view(request):
 def offers_view(request):
     offers = OfferModel.objects.all()
     problems = ProblemModel.objects.all()
-    my_offers = OfferModel.objects.filter(user=request.user)
+    my_offers = []
+    if request.user.is_authenticated:
+        my_offers = OfferModel.objects.filter(user=request.user)
 
     search_query = request.GET.get('q', '')
     if search_query:
@@ -54,8 +56,10 @@ def offers_view(request):
     context = {
         'offers': offers,
         'problems': problems,
-        'my_offers': my_offers
     }
+    if my_offers:
+        context['my_offers'] = my_offers
+
     return render(request, 'offers/offer.html', context)
 
 
