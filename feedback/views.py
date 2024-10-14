@@ -3,12 +3,8 @@ from django.db.models import Q
 from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
 
-from feedback.forms import ProblemForm, OfferForm
-from feedback.models import ProblemModel, OfferModel
-
-
-def comments_view(request):
-    return render(request, 'comments/comment.html')
+from feedback.forms import ProblemForm, OfferForm, CommentForm
+from feedback.models import ProblemModel, OfferModel, CommentsModel
 
 def send_problem_view(request):
     if request.method == 'POST':
@@ -64,14 +60,21 @@ def offers_view(request):
 
 
 def offer_or_problem_detail_view(request, pk):
-    if request.method == 'GET':
-        offer = OfferModel.objects.filter(id=pk).first()
-        problem = ProblemModel.objects.filter(id=pk).first()
+    offer = OfferModel.objects.filter(id=pk).first()
+    if offer is None:
+        offer = ProblemModel.objects.filter(id=pk).first()
 
+    if request.method == 'POST':
+        form = CommentForm(data=request.POST)
+        if form.is_valid():
+            text = form.cleaned_data['text']
+            CommentsModel.objects.create(text=text, user=request.user, offer=offer)
+        return render(request, 'comments/comment.html')
+
+    else:
+        form = CommentForm()
         context = {
             'offer': offer,
-            'problem': problem,
+            'form': form
         }
         return render(request, 'comments/comment.html', context)
-
-    return render(request, 'index.html')

@@ -7,3 +7,6 @@ class ProblemForm(forms.Form):
 class OfferForm(forms.Form):
     offer_title = forms.CharField(max_length=255)
     offer_description = forms.CharField(widget=forms.Textarea)
+
+class CommentForm(forms.Form):
+    text = forms.CharField(max_length=255)
