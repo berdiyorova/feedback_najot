@@ -71,7 +71,7 @@
                                     <img src="{% static 'files/images/white-logo.png' %}" alt="Avatar">
                                 </div>
                                 <div class="card-text">
-                                    <div class="title-total">
+                                    <div class="title-total" style="color:Tomato;">
                                         <div class="title">{{offer.title}}</div>
                                         <div class="desc">{{offer.description}}</div>
                                         <form  method="post" action="{% url 'feedback:like' offer.id %}">
