@@ -73,3 +73,19 @@ class QuestionModel(AbstractBaseModel):
     class Meta:
         verbose_name = "Question"
         verbose_name_plural = "Questions"
+
+
+class LikeOffer(models.Model):
+    user = models.ForeignKey(CustomUserModel, on_delete=models.CASCADE)
+    offer = models.ForeignKey(OfferModel, on_delete=models.CASCADE)
+
+    class Meta:
+        unique_together = ('user', 'offer')
+
+
+class LikeProblem(models.Model):
+    user = models.ForeignKey(CustomUserModel, on_delete=models.CASCADE)
+    problem = models.ForeignKey(ProblemModel, on_delete=models.CASCADE)
+
+    class Meta:
+        unique_together = ('user', 'problem')

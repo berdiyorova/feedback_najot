@@ -1,10 +1,11 @@
 from django.contrib import messages
 from django.db.models import Q
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse_lazy
 
 from feedback.forms import ProblemForm, OfferForm, CommentForm
-from feedback.models import ProblemModel, OfferModel, CommentsModel
+from feedback.models import ProblemModel, OfferModel, CommentsModel, LikeOffer, LikeProblem
+
 
 def send_problem_view(request):
     if request.method == 'POST':
@@ -61,6 +62,7 @@ def offers_view(request):
 
 def offer_or_problem_detail_view(request, pk):
     offer = OfferModel.objects.filter(id=pk).first()
+
     if offer is None:
         offer = ProblemModel.objects.filter(id=pk).first()
 
@@ -69,6 +71,8 @@ def offer_or_problem_detail_view(request, pk):
         if form.is_valid():
             text = form.cleaned_data['text']
             CommentsModel.objects.create(text=text, user=request.user, offer=offer)
+            offer.reply_count += 1
+            offer.save()
         return render(request, 'comments/comment.html')
 
     else:
@@ -77,4 +81,27 @@ def offer_or_problem_detail_view(request, pk):
             'offer': offer,
             'form': form
         }
+        offer.views_count += 1
+        offer.save()
         return render(request, 'comments/comment.html', context)
+
+
+def like_view(request, pk):
+    offer = OfferModel.objects.filter(id=pk).first()
+
+    if offer is not None:
+        # Add a like or increment like count
+        LikeOffer.objects.get_or_create(user=request.user, offer=offer)
+        # Increment the likes count on the post
+        offer.likes_count += 1
+        offer.save()
+    else:
+        problem = ProblemModel.objects.filter(id=pk).first()
+        # Add a like or increment like count
+        LikeProblem.objects.get_or_create(user=request.user, problem=problem)
+
+        # Increment the likes count on the post
+        problem.likes_count += 1
+        problem.save()
+
+    return render(request, 'comments/comment.html')

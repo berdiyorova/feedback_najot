@@ -74,11 +74,14 @@
                                     <div class="title-total">
                                         <div class="title">{{offer.title}}</div>
                                         <div class="desc">{{offer.description}}</div>
-                                        <div class="actions">
-                                            <i class="bi bi-heart">{{offer.likes_count}}</i>
+                                        <form  method="post" action="{% url 'feedback:like' offer.id %}">
+                                            {% csrf_token %}
+                                            <div class="actions">
+                                            <button type="submit"><i class="bi bi-heart">{{offer.likes_count}}</i></button>
                                             <i class="bi bi-eye">{{offer.views_count}}</i>
                                             <i class="bi bi-chat">{{offer.reply_count}}</i>
                                         </div>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
