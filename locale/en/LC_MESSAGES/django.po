@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-13 14:41+0500\n"
+"POT-Creation-Date: 2024-10-14 15:53+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -38,8 +38,8 @@ msgstr ""
 msgid "Problem"
 msgstr ""
 
-#: .\feedback\models.py:20 .\templates\index.html:104
-#: .\templates\offers\offer.html:107
+#: .\feedback\models.py:20 .\templates\index.html:100
+#: .\templates\offers\offer.html:106
 msgid "Problems"
 msgstr ""
 
@@ -51,8 +51,8 @@ msgstr ""
 msgid "Offer"
 msgstr ""
 
-#: .\feedback\models.py:43 .\templates\index.html:45
-#: .\templates\offers\offer.html:107
+#: .\feedback\models.py:43 .\templates\index.html:41
+#: .\templates\offers\offer.html:106
 msgid "Offers"
 msgstr ""
 
@@ -109,52 +109,48 @@ msgstr ""
 msgid "Log in"
 msgstr ""
 
-#: .\templates\index.html:33 .\templates\index.html:348
+#: .\templates\index.html:33 .\templates\index.html:344
 #: .\templates\offers\offer.html:53 .\templates\profile\profile.html:47
 msgid "Home"
 msgstr ""
 
 #: .\templates\index.html:37
-msgid "Send Problem"
+msgid "Giving feedback"
 msgstr ""
 
-#: .\templates\index.html:41
-msgid "Send Offers"
-msgstr ""
-
-#: .\templates\index.html:49
+#: .\templates\index.html:45
 msgid "Profile"
 msgstr ""
 
-#: .\templates\index.html:80
+#: .\templates\index.html:76
 msgid "Logout"
 msgstr ""
 
-#: .\templates\index.html:86
+#: .\templates\index.html:82
 msgid "Login"
 msgstr ""
 
-#: .\templates\index.html:100
+#: .\templates\index.html:96
 msgid "Exchange of ideas"
 msgstr ""
 
-#: .\templates\index.html:102
+#: .\templates\index.html:98
 msgid "Online platform for requests and offers"
 msgstr ""
 
-#: .\templates\index.html:106
+#: .\templates\index.html:102
 msgid "Make an offer"
 msgstr ""
 
-#: .\templates\index.html:134
+#: .\templates\index.html:130
 msgid "Brief information about the site"
 msgstr ""
 
-#: .\templates\index.html:137
+#: .\templates\index.html:133
 msgid "Feedback"
 msgstr ""
 
-#: .\templates\index.html:139
+#: .\templates\index.html:135
 msgid ""
 " The Najot Ta'lim Feedback Site is designed to collect and analyze feedback "
 "on services,\n"
@@ -171,55 +167,55 @@ msgid ""
 "                            strengthening its image."
 msgstr ""
 
-#: .\templates\index.html:159
+#: .\templates\index.html:155
 msgid "Questions - Answers"
 msgstr ""
 
-#: .\templates\index.html:161
+#: .\templates\index.html:157
 msgid "Frequently asked questions"
 msgstr ""
 
-#: .\templates\index.html:195 .\templates\profile\profile.html:55
+#: .\templates\index.html:191 .\templates\profile\profile.html:55
 msgid "Team"
 msgstr ""
 
-#: .\templates\index.html:197
+#: .\templates\index.html:193
 msgid "About the participants in the team"
 msgstr ""
 
-#: .\templates\index.html:245 .\templates\profile\profile.html:59
+#: .\templates\index.html:241 .\templates\profile\profile.html:59
 msgid "Appeals"
 msgstr ""
 
-#: .\templates\index.html:247
+#: .\templates\index.html:243
 msgid "Best offers"
 msgstr ""
 
-#: .\templates\index.html:263 .\templates\index.html:297
+#: .\templates\index.html:259 .\templates\index.html:293
 msgid "Student"
 msgstr ""
 
-#: .\templates\index.html:351
+#: .\templates\index.html:347
 msgid "Terms"
 msgstr ""
 
-#: .\templates\index.html:354
+#: .\templates\index.html:350
 msgid "Privacy Policy"
 msgstr ""
 
-#: .\templates\index.html:357
+#: .\templates\index.html:353
 msgid "Contact"
 msgstr ""
 
-#: .\templates\offers\offer.html:152
+#: .\templates\offers\offer.html:151
 msgid "Anonym user"
 msgstr ""
 
-#: .\templates\offers\offer.html:201
+#: .\templates\offers\offer.html:200
 msgid "Previous"
 msgstr ""
 
-#: .\templates\offers\offer.html:202
+#: .\templates\offers\offer.html:201
 msgid "Next"
 msgstr ""
 
